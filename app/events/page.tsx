@@ -53,7 +53,7 @@ const events = [
 export default function EventsPage() {
   return (
     <main className="min-h-screen overflow-visible bg-[#efe3d3] px-5 py-10 text-[#30231f]">
-      <section className="mx-auto max-w-6xl overflow-visible">
+      <section className="mx-auto max-w-6xl overflow-visible py-10">
         <motion.p
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}

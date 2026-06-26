@@ -1,76 +1,71 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 
+import img001 from "../images/001.jpg";
+import img002 from "../images/002.jpg";
+import img003 from "../images/003.jpg";
+import img004 from "../images/004.jpg";
+import img005 from "../images/005.jpg";
+import img006 from "../images/006.jpg";
+import img007 from "../images/007.jpg";
+import img008 from "../images/008.jpg";
+import img009 from "../images/009.jpg";
+import img010 from "../images/0010.jpg";
+import img011 from "../images/0011.jpg";
+import img012 from "../images/0012.jpg";
+
 const photos = [
-  { title: "Engagement", height: "h-96" },
-  { title: "Bride", height: "h-72" },
-  { title: "Groom", height: "h-80" },
-  { title: "Together", height: "h-96" },
-  { title: "Family", height: "h-64" },
-  { title: "Celebration", height: "h-80" },
+  img001,
+  img002,
+  img003,
+  img004,
+  img005,
+  img006,
+  img007,
+  img008,
+  img009,
+  img010,
+  img011,
+  img012,
 ];
 
 export default function GalleryPage() {
   return (
-    <main className="min-h-screen bg-[#efe3d3] px-5 py-10 text-[#30231f]">
-      <section className="mx-auto max-w-6xl">
-        <motion.p
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-center text-xs uppercase tracking-[0.35em] text-[#6D7355]"
-        >
-          Wedding Gallery
-        </motion.p>
+    <main className="min-h-screen bg-[#efe3d3] px-5">
+      <section className="mx-auto max-w-7xl">
+        <div className="h-24">
 
-        <motion.h1
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.15 }}
-          className="mt-4 text-center font-serif text-5xl"
-        >
-          Our Story in Pictures
-        </motion.h1>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 35 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-          className="mt-10 overflow-hidden rounded-[2rem] bg-[#3b241f] p-4 shadow-2xl"
-        >
-          <div className="flex h-[420px] items-center justify-center rounded-[1.5rem] border border-[#d8b66a]/40 bg-[#4a2b24] text-[#d8b66a]">
-            <p className="font-serif text-4xl">Hero Couple Photo</p>
-          </div>
-        </motion.div>
-
-        <div className="mt-8 columns-1 gap-6 sm:columns-2 lg:columns-3">
+        <div className="columns-1 gap-8 space-y-8 sm:columns-2 xl:columns-3">
           {photos.map((photo, index) => (
             <motion.div
-              key={photo.title}
-              initial={{ opacity: 0, y: 70, scale: 0.95 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              viewport={{ once: true, amount: 0.25 }}
+              key={index}
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.15 }}
               transition={{
-                duration: 0.6,
-                delay: index * 0.08,
-                ease: "easeOut",
+                duration: 0.7,
+                delay: index * 0.04,
               }}
-              className="mb-6 break-inside-avoid overflow-hidden rounded-[1.5rem] bg-[#fffaf1] p-3 shadow-xl"
+              className="group relative mb-8 break-inside-avoid overflow-hidden rounded-[2rem] bg-white p-3 shadow-2xl"
             >
-              <div
-                className={`${photo.height} flex items-center justify-center rounded-[1rem] bg-[#e8d9c8]`}
-              >
-                <p className="font-serif text-2xl text-[#6D7355]">
-                  {photo.title}
-                </p>
+              <div className="overflow-hidden rounded-[1.5rem]">
+                <Image
+                  src={photo}
+                  alt={`Memory ${index + 1}`}
+                  placeholder="blur"
+                  className="h-auto w-full object-cover transition-all duration-700 ease-out group-hover:scale-125"
+                />
               </div>
 
-              <p className="mt-3 px-1 text-sm text-[#6D7355]">
-                {photo.title} moment
-              </p>
+              <div className="pointer-events-none absolute inset-0 rounded-[2rem] ring-0 transition-all duration-500 group-hover:ring-4 group-hover:ring-white/50" />
             </motion.div>
           ))}
         </div>
+
       </section>
     </main>
   );
