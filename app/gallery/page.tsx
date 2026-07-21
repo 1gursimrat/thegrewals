@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 import img001 from "../images/001.jpg";
-import img002 from "../images/002.jpg";
+
 import img003 from "../images/003.jpg";
 import img004 from "../images/004.jpg";
 import img005 from "../images/005.jpg";
@@ -18,7 +18,6 @@ import img012 from "../images/0012.jpg";
 
 const photos = [
   img001,
-  img002,
   img003,
   img004,
   img005,

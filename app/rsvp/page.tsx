@@ -158,7 +158,7 @@ export default function RSVPPage() {
           transition={{ delay: 0.15 }}
           className="mt-8 rounded-[2rem] bg-white p-8 shadow-xl"
         >
-          <label className="text-xs uppercase tracking-[0.25em] text-[#9a6b5f]">
+          <label className="text-xs uppercase tracking-[0.25em] text-[#6D4C3D]">
             Full Name
           </label>
           <input
@@ -166,9 +166,9 @@ export default function RSVPPage() {
             value={name}
             onChange={(e) => setName(e.target.value)}
             placeholder="Your full name"
-            className="mt-2 w-full rounded-2xl border border-[#d9c8b5] px-4 py-3 outline-none"
+            className="mt-2 w-full rounded-2xl border border-[#b89b82] bg-[#fffdf9] px-4 py-3 text-[#3D2F2A] outline-none placeholder:text-[#8a6f5a]"
           />
-          <label className="mt-6 block text-xs uppercase tracking-[0.25em] text-[#9a6b5f]">
+          <label className="mt-6 block text-xs uppercase tracking-[0.25em] text-[#6D4C3D]">
             Email
           </label>
           <input
@@ -177,10 +177,10 @@ export default function RSVPPage() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="your@email.com"
-            className="mt-2 w-full rounded-2xl border border-[#d9c8b5] px-4 py-3 outline-none"
+            className="mt-2 w-full rounded-2xl border border-[#b89b82] bg-[#fffdf9] px-4 py-3 text-[#3D2F2A] outline-none placeholder:text-[#8a6f5a]"
           />
 
-          <label className="mt-6 block text-xs uppercase tracking-[0.25em] text-[#9a6b5f]">
+          <label className="mt-6 block text-xs uppercase tracking-[0.25em] text-[#6D4C3D]">
             Phone Number
           </label>
           <input
@@ -188,42 +188,42 @@ export default function RSVPPage() {
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
             placeholder="(555) 555-5555"
-            className="mt-2 w-full rounded-2xl border border-[#d9c8b5] px-4 py-3 outline-none"
+            className="mt-2 w-full rounded-2xl border border-[#b89b82] bg-[#fffdf9] px-4 py-3 text-[#3D2F2A] outline-none placeholder:text-[#8a6f5a]"
           />
 
-          <label className="mt-6 block text-xs uppercase tracking-[0.25em] text-[#9a6b5f]">
+          <label className="mt-6 block text-xs uppercase tracking-[0.25em] text-[#6D4C3D]">
             Will you be attending?
           </label>
           <select
             value={attending}
             onChange={(e) => setAttending(e.target.value)}
-            className="mt-2 w-full rounded-2xl border border-[#d9c8b5] px-4 py-3 outline-none"
+            className="mt-2 w-full rounded-2xl border border-[#b89b82] bg-[#fffdf9] px-4 py-3 text-[#3D2F2A] outline-none"
           >
             <option value="Yes">Happily Accept</option>
             <option value="No">Regretfully Decline</option>
           </select>
 
-          <label className="mt-6 block text-xs uppercase tracking-[0.25em] text-[#9a6b5f]">
+          <label className="mt-6 block text-xs uppercase tracking-[0.25em] text-[#6D4C3D]">
             Number of Guests
           </label>
           <select
             value={guests}
             onChange={(e) => setGuests(e.target.value)}
-            className="mt-2 w-full rounded-2xl border border-[#d9c8b5] px-4 py-3 outline-none"
+            className="mt-2 w-full rounded-2xl border border-[#b89b82] bg-[#fffdf9] px-4 py-3 text-[#3D2F2A] outline-none"
           >
             {[1, 2, 3, 4, 5, 6, 7, 8].map((n) => (
               <option key={n}>{n}</option>
             ))}
           </select>
 
-          <label className="mt-6 block text-xs uppercase tracking-[0.25em] text-[#9a6b5f]">
+          <label className="mt-6 block text-xs uppercase tracking-[0.25em] text-[#6D4C3D]">
             Events Attending
           </label>
           <div className="mt-3 space-y-3">
             {eventDetails.map((event) => (
               <label
                 key={event.code}
-                className="flex cursor-pointer items-center gap-3 rounded-2xl border border-[#d9c8b5] bg-white px-4 py-4 transition hover:border-[#C98C7A]"
+                className="flex cursor-pointer items-center gap-3 rounded-2xl border border-[#b89b82] bg-[#fffdf9] px-4 py-4 text-[#3D2F2A] transition hover:border-[#C98C7A]"
               >
                 <input
                   type="checkbox"
@@ -244,7 +244,7 @@ export default function RSVPPage() {
             ))}
           </div>
 
-          <label className="mt-6 block text-xs uppercase tracking-[0.25em] text-[#9a6b5f]">
+          <label className="mt-6 block text-xs uppercase tracking-[0.25em] text-[#6D4C3D]">
             Message
           </label>
           <textarea
@@ -252,14 +252,14 @@ export default function RSVPPage() {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             placeholder="Leave a message for the bride & groom..."
-            className="mt-2 w-full rounded-2xl border border-[#d9c8b5] px-4 py-3 outline-none"
+            className="mt-2 w-full rounded-2xl border border-[#b89b82] bg-[#fffdf9] px-4 py-3 text-[#3D2F2A] outline-none placeholder:text-[#8a6f5a]"
           />
 
           <motion.button
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             disabled={loading}
-            className="mt-8 w-full rounded-full bg-[#3D2F2A] py-4 text-lg text-white disabled:opacity-60"
+            className="mt-8 w-full rounded-full bg-[#3D2F2A] py-4 text-lg font-medium text-white shadow-sm disabled:opacity-60"
             type="submit"
           >
             {loading ? "Sending..." : "Confirm Boarding ✈️"}
@@ -273,10 +273,10 @@ export default function RSVPPage() {
 function Info({ label, value }: { label: string; value: string }) {
   return (
     <div>
-      <p className="text-[10px] uppercase tracking-[0.2em] text-[#9a6b5f]">
+      <p className="text-[10px] uppercase tracking-[0.2em] text-[#6D4C3D]">
         {label}
       </p>
-      <p className="mt-1 font-medium">{value}</p>
+      <p className="mt-1 font-medium text-[#3D2F2A]">{value}</p>
     </div>
   );
 }

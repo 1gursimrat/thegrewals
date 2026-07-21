@@ -22,8 +22,10 @@ export default function ResourcesPage() {
       items: [
         "Book at the Jaggo / Reception venue",
         "Easy access to restaurants and shopping",
-        "More hotel links coming soon",
+        "Convenient for the full wedding weekend",
       ],
+      link: "https://www.ihg.com/holidayinn/hotels/us/en/find-hotels/select-roomrate?fromRedirect=true&qSrt=sBR&qSlH=CVGAP&qRms=1&qAdlt=1&qCiD=25&qCiMy=102026&qCoD=29&qCoMy=102026&qGrpCd=CIB&setPMCookies=true&qSHBrC=HI&qDest=1717%20Airport%20Exchange%20Blvd.%2C%20Erlanger%2C%20KY%2C%20US&showApp=true&adjustMonth=false&srb_u=1",
+      linkLabel: "Book your hotel",
     },
     {
       title: "Airports",
@@ -36,7 +38,7 @@ export default function ResourcesPage() {
       ],
     },
     {
-      title: "What to Wear",
+      title: "What to Wears",
       icon: "👗",
       text: "Traditional Indian attire is encouraged for the ceremony and Jaggo. Formal attire is recommended for the Reception.",
       items: [
@@ -50,7 +52,13 @@ export default function ResourcesPage() {
       icon: "🧵",
       text: "Guests are welcome to wear Punjabi suits, lehengas, sarees, kurtas, sherwanis, or formal Indian outfits.",
       items: [
-        "TBD",
+        "Toronto:",
+        "• Raaja Rani in Brampton on Ebenezer Road",
+        "• Vastra Villa by Shikha in Brampton on Gore Road",
+        "Online:",
+        "• Lashkaraa",
+        "• Kalki Fashion",
+        "• Pernias Pop Up Shop",
       ],
     },
     {
@@ -110,7 +118,7 @@ export default function ResourcesPage() {
         <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
           <div className="lg:col-span-2 center">
             <h1 className="font-serif text-5xl md:text-7xl center">
-              Guest Resources
+              Guest Resourcessss
             </h1>
 
             <p className="mt-5 max-w-2xl text-lg leading-8 text-[#6D7355]">
@@ -233,6 +241,17 @@ export default function ResourcesPage() {
                   </li>
                 ))}
               </ul>
+
+              {item.link ? (
+                <a
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-5 inline-flex items-center rounded-full bg-[#3D2F2A] px-4 py-2 text-sm font-medium text-white transition hover:bg-[#6D7355]"
+                >
+                  {item.linkLabel || "Learn more"} →
+                </a>
+              ) : null}
             </div>
           ))}
         </div>
