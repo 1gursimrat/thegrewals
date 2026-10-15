@@ -6,8 +6,8 @@ import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
 
 const eventDetails = [
-  { title: "Ladies Sangeet", label: "Ladies Sangeet (Buffalo)", date: "NOV 21,2026", time: "4:00 PM", code: "SGT", venue: "Taste of India, Buffalo, NY 14226"},
-  { title: "Maiyan & Mehndi", label: "Maiyan & Mehndi (Buffalo)", date: "NOV 23,2026", time: "11:00 AM", code: "MHD", venue: "Taste of India, Buffalo, NY 14226" },
+  { title: "Ladies Sangeet", label: "Ladies Sangeet (Buffalo)", date: "NOV 21,2026", time: "4:00 PM", code: "SGT", venue: "Flavors of India, 4401 Transit Rd, Williamsville, NY 14221"},
+  { title: "Maiyan & Mehndi", label: "Maiyan & Mehndi (Buffalo)", date: "NOV 23,2026", time: "11:00 AM", code: "MHD", venue: "185 Corsica Way, Buffalo, NY 14228" },
   { title: "Jaago Night", label: "Jaago Night (Cincinnati)", date: "NOV 26,2026", time: "4:00 PM", code: "JGO", venue: "Holiday Inn Cincinnati Airport by IHG" },
   { title: "Anand Karaj", label: "Anand Karaj (Cincinnati)", date: "NOV 27,2026", time: "10:00 AM", code: "AKJ", venue: "Guru Nanak Society of Greater Cincinnati" },
   { title: "Reception", label: "Reception (Cincinnati)", date: "NOV 28,2026", time: "5:00 PM", code: "RCP", venue: "Holiday Inn Cincinnati Airport by IHG" },

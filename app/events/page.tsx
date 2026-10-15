@@ -9,8 +9,8 @@ const events = [
     date: "NOV 21",
     day: "SATURDAY",
     time: "4:00 PM",
-    venue: "Taste of India",
-    address: "3192 Sheridan Drive, Amherst, NY 14226",
+    venue: "Flavors of India",
+    address: "4401 Transit Rd, Williamsville, NY 14221",
   },
   {
     code: "MHD",

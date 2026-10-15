@@ -33,6 +33,7 @@ export default function ResourcesPage() {
       text: "Cincinnati/Northern Kentucky International Airport (CVG) is the closest airport for guests flying in.",
       items: [
         "CVG Airport is the main airport",
+        "Free shuttle available between CVG Airport and the Holiday Inn Cincinnati Airport venue",
         "Uber and Lyft are available",
         "Rental cars are available at the airport",
       ],
